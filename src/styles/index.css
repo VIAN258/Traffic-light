@@ -1,12 +1,43 @@
 
-/* 
-
-    You can write your own styles here...
+body {
+  background-color: white;
+}
+div.semaforo {
+  height: 360px;
+  width: 200px;
+  background-color: black;
+  margin: 0px auto;
+  margin-top: 100px;
+  
+  
+}
+div.rojo {
+    background: red;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    margin-left: 50px;
+    margin-top: 5px;
+    position:absolute;
     
+}
+div.amarillo {
+    background: yellow;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    margin-left: 50px;
+    margin-top: 20px;
+}
+div.verde {
+    background: green;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    margin-top: 25px;
+    margin-left: 50px;
+}
+div.primero {
+    height: 110px;
     
-    ...Or you can use the import command to include 
-    other sylesheets into your bunde as well, e.j:
-    
-    import 'relative/path/to/stylesheet.scss';
-
-*/
+}

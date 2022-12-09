@@ -6,26 +6,31 @@ import rigoImage from "../../img/rigo-baby.jpg";
 
 //create your first component
 const Home = () => {
-	const[color, setColor] = useState("red")
-	const change = (color) => setColor(previous => color)
-
+	const[selected, setSelected] = useState("")
+	const modified = color => {
+		if (color === selected) {
+			setSelected("");
+		} else {
+			setSelected(color);
+		}
+	};
 
 	return (
 	<body>
-		<div class="semaforo">
-			<div class='primero'>
-				{
-                  color == red ? <div class="rojo red"></div> : <div class="rojo"></div>
-				  
-				}
-				<a onClick={() => change("red")} href="#"></a>
+		<div className="semaforo">
+			<div className='primero'>
+		
+                  <div className={
+					selected == "red" ? "rojo red" : "rojo"
+				  }
+				    onClick={() => modified("red")}></div>
 				
 			</div>
-			<div class='segundo'>
-				<div class="amarillo"></div>
+			<div className='segundo'>
+				<div className="amarillo"></div>
 			</div>
-			<div class='segundo'>
-				<div class="verde"></div>
+			<div className='segundo'>
+				<div className="verde"></div>
 			</div>
 		</div>
 	</body>

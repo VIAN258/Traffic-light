@@ -1,4 +1,5 @@
-import React from "react";
+import React,{useState} from "react";
+
 
 
 //include images into your bundle
@@ -8,7 +9,7 @@ import rigoImage from "../../img/rigo-baby.jpg";
 const Home = () => {
 	const[selected, setSelected] = useState("rojo")
 	
-	const change = (selected) => setSelected(previous => selected)
+	const change = (newSelected) => setSelected( newSelected)
 
 	return (
 	<body>
@@ -19,10 +20,10 @@ const Home = () => {
 					
 			</div>
 			<div className='segundo'>
-				<div className="amarillo"></div>
+				<div className={selected == "amarillo" ? "amarillo yellow" : "amarillo"} onClick={() => change("amarillo")}></div>
 			</div>
 			<div className='tercero'>
-				<div className="verde"></div>
+				<div className={selected == "verde" ? "verde green" : "verde"} onClick={() => change("verde")}></div>
 			</div>
 		</div>
 	</body>
